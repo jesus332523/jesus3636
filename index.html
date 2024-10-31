@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario Registro</title>
+    <!-- Enlace a la hoja de estilo CSS -->
+    <script src="validacion.js" defer></script>
+</head>
+<body>
+    <section class="form-register">
+        <form action="#" method="POST" onsubmit="return validarNumeroControl()">
+            <h4>Formulario Registro</h4>
+            
+            <label for="numero_control">Número de Control</label>
+            <input class="controls" type="text" name="numero_control" id="numero_control" placeholder="Ingrese su Número de Control" required maxlength="8" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 8)">
+            <p>Estoy de acuerdo con <a href="#">Términos y condiciones</a></p>
+            
+            <input class="botons" type="submit" value="Enviar">
+            
+            <p><a href="#">Ya Tengo Cuenta</a></p>
+        </form>
+    </section>
+</body>
+</html>
